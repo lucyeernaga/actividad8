@@ -4,21 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+
+    <style>
+        .Lista {
+
+        }
+
+        .Lista-cancion {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // crear un array con 5 canciones, recorrer el array y mostrar en consola cada canción
-        const lista_canciones = ["All I want for Christmas is you", "Last Christmas", "Holly Jolly Christmas", "It’s the most wonderful time of the year", "Santa tell me"]
-        lista_canciones.forEach( (canciones)=> {
-            console.log
-        });
+    <!-- SUIt css -->
+    <div id="ListaCanciones" class="Lista">
+        <!-- <div class="Lista-cancion">
+            All I want for Christmas is you <br>
+            Mariah Carey
+        </div> -->
+        <!-- <div class="Lista-cancion">
+            All I want for Christmas is you
+        </div> -->
+    </div>
 
+    <div>
+        <h3>Canción reproduciendose</h3>
+        <did id="playingSong">
+            <!-- info de la cancion que se este reproduciendo -->
+        </did>
+    </div>
 
-        // crear un array con 5 artistas que correspondan  cada canción del 1er array 
-        const lista_artistas = ["Mariah Carey", "Wham!", "Michael Bublé", "Andy Williams", "Ariana Grande"]
-        lista_artistas.forEach( (artistas, canciones)=>{
-            console.log(`Elemento ${artistas} y su indice es ${canciones}`);
-        });
-    </script>
+    <!-- Botones -->
+    <button id="btnTema3">Play Song 3</button>
+
+    <button id="btnAnt">Anterior</button>
+    <button id="btnPlay">Play</button>
+    <button id="btnPausa">Pausa</button>
+    <button id="btnSig">Siguente</button>
+
+    <script src="./script.js"></script>
 </body>
 </html>
