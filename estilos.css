@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b9debe;
+    font-family: "Segoe UI";
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px ;
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.main-box {
+    background-color: #b9debe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.buttons-id {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #87c38f;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttons-id:hover {
+    transform: scale(1.1);
+}
+
+.Lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    gap: 20px;
+    padding: 1rem 1rem 1rem 1rem;
+    transition: transform 1s ease;
+}
+
+.Lista-cancion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    background-color: #87c38f;
+    border: 5px solid #87c38f;
+    border-radius: 10px;
+    
+}
+
+.Lista-cancion--img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.h3 {
+    font-size: 25px;
+    padding: 15px;
+    color: black;
+}
+
+.playingSong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.playingSong-h3 {
+    margin: 10px 10px;
+}
+
+#btnTema3 {
+    border-radius: 6px;
+    padding: 10px;
+    border: none;
+    background-color: #da2c38;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#btnTema3:hover {
+    transform: scale(1.1);
+}
+
+.imagenReproduciendo {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+#imagenReproduciendo_0 {
+    width: 200px;
+    height: auto;
+}
+
+#imagenReproduciendo_1 {
+    width: 200px;
+    height: auto;
+}
+
+#imagenReproduciendo_2 {
+    width: 200px;
+    height: auto;
+}
+
+#imagenReproduciendo_3 {
+    width: 200px;
+    height: auto;
+}
+
+#imagenReproduciendo_4 {
+    width: 200px;
+    height: auto;
+}
+
+.reproductor {
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 30px;
+}

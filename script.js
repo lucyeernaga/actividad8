@@ -15,28 +15,28 @@
 const lista_canciones = [
     { 
         artista: "Mariah Carey",
-        url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        img: "https://mi-imagen1.png",
+        url:"https://ia803101.us.archive.org/0/items/mariahcareyalliwantforchristmasisyou_201912/Mariah%20Carey%20-%20All%20I%20Want%20For%20Christmas%20Is%20You.mp3",
+        img: "./img/MariahCarey.webp",
         titulo: "All I want for Christmas is you"
     },{ 
         artista: "Wham!",
-        url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-        img: "https://mi-imagen2.png",
+        url:"https://ia904602.us.archive.org/4/items/wham-last-christmas-extended-version-of-original-45-mix-m-128s-re-creation/Wham%21%20-%20Last%20Christmas%20%28Extended%20Version%20of%20Original%2045%20Mix%29%20%5BM128%27s%20Re-creation%5D.mp3",
+        img: "./img/Wham.jpg",
         titulo: "Last Christmas"
     },{ 
         artista: "Michael Bublé",
-        url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-        img: "https://mi-imagen13png",
+        url:"https://ia800307.us.archive.org/20/items/ChristmasMichael/Holly%20Jolly%20Christmas.mp3",
+        img: "./img/MichaelBuble.jpg",
         titulo: "Holly Jolly Christmas"
     },{ 
         artista: "Andy Williams",
-        url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-        img: "https://mi-imagen4.png",
+        url:"./img/Andy_Williams_-_The_Most_Wonderful_Time_Of_The_Year_CeeNaija.com_.mp3",
+        img: "./img/AndyWilliams.jpg",
         titulo: "It's the most wonderful time of the year"
     },{ 
         artista: "Ariana Grande",
-        url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-        img: "https://mi-imagen5.png",
+        url:"https://ia601503.us.archive.org/0/items/ariana-grande-santa-tell-me-official-video-128-kbps.lite/Ariana%20Grande%20-%20Santa%20Tell%20Me%20%28Official%20Video%29%20%28128%20kbps%29.lite.mp3",
+        img:"./img/ArianaGrande.jpg",
         titulo: "Santa tell me"
     }
 ];
@@ -86,13 +86,16 @@ function imprimirReproduciendo() {
     const song = lista_canciones[idCancionActual].titulo;
     const artist = lista_canciones[idCancionActual].artista;
     const url = lista_canciones[idCancionActual].url;
+    const img = lista_canciones[idCancionActual].img; 
+    const imgId = `imagenReproduciendo_${idCancionActual}`; // he creado un id único
     
     console.log("Artista: " +artist+ " - cancion: "+song);
 
-    divPlayingSong.innerHTML = `<div> 
-                                    idCancionActual: ${idCancionActual} <br/>
-                                    cancion: ${song} <br/>
-                                    artista: ${artist}
+    divPlayingSong.innerHTML = `<div class="playingSong"> 
+                                  Cancion Actual: ${idCancionActual} <br/>
+                                  Cancion: ${song} <br/>
+                                  Artista: ${artist} <br/>
+                                  <img class="imagenReproduciendo" id="${imgId}" src='${img}' alt="${song}" />
                                 </div>`;
 
     // cambiar el src de nuestro audio HTML
@@ -170,6 +173,7 @@ lista_canciones.forEach((cancion, index)=>{
 
     const song = cancion.titulo;
     const artist = cancion.artista;
+    const img = cancion.img;
 
     // innerHTML (usamos el + para agregar un nuevo elemento) apend, push, +=
     
@@ -178,6 +182,7 @@ lista_canciones.forEach((cancion, index)=>{
     //                            </div>`;
 
     divListaCanciones.innerHTML += `<div id="song_${index}" class="Lista-cancion">
+                                      <img class="Lista-cancion--img" src="${img}" alt="${song}"/>
                                       ${song} <br>
                                       ${artist}
                               </div>`

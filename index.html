@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
 
-    <style>
-        
+    <link rel="stylesheet" href="./estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-        .Lista-cancion {
-            border: 1px solid gray;
-            padding: 5px;
-        }
-    </style>
+
+
 </head>
+
 <body>
-    <!-- SUIt css -->
-    <div id="ListaCanciones" class="Lista">
-        <!-- <div class="Lista-cancion">
+    <header class="header">
+        <h2 class="header-h2">¡My Music Player!</h2>
+    </header>
+
+    <main class="main">
+        <section class="main-box">
+            <div class="Lista" id="ListaCanciones" >
+            <!-- <div class="Lista-cancion">
             All I want for Christmas is you <br>
             Mariah Carey
         </div> -->
-        <!-- <div class="Lista-cancion">
+            <!-- <div class="Lista-cancion">
             All I want for Christmas is you
         </div> -->
-    </div>
+        </div>
+        </section>
+        
+        <div>
+            
+            <did id="playingSong">
+                <h3 class="playingSong-h3">Canción reproduciendose</h3>
+                <!-- info de la cancion que se este reproduciendo -->
+            </did>
+        </div>
 
-    <div>
-        <h3>Canción reproduciendose</h3>
-        <did id="playingSong">
-            <!-- info de la cancion que se este reproduciendo -->
-        </did>
-    </div>
+        <!-- Botones -->
+        <div class="buttons">
+            <button id="btnTema3">Play Song 3</button>
+            <button class="buttons-id" id="btnAnt"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button class="buttons-id" id="btnPlay"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button class="buttons-id" id="btnPausa"><i class="fa fa-pause" aria-hidden="true"></i></button>
+            <button class="buttons-id" id="btnSig"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
 
-    <!-- Botones -->
-    <button id="btnTema3">Play Song 3</button>
 
-    <button id="btnAnt">Anterior</button>
-    <button id="btnPlay">Play</button>
-    <button id="btnPausa">Pausa</button>
-    <button id="btnSig">Siguente</button>
+        <!-- Etiqueta HTML que me permite reproduccion audios -->
+        <audio class="reproductor" src="" autoplay controls>
+        </audio>
 
-    <!-- Etiqueta HTML que me permite reproduccion audios -->
-    <audio src="" autoplay controls>
-    </audio >
+        <!-- Barra de progreso de la canción -->
+        <div class="audio-bar">
+            <div class="audio-bar-line"></div>
+        </div>
+    </main>
 
-    <!-- Barra de progreso de la canción -->
-    <div class="audio-bar">
-        <div class="audio-bar-line"></div>
-    </div>
+    <footer class="footer">
+        
+    </footer>
 
 
 
     <script src="./script.js"></script>
 </body>
+
 </html>
